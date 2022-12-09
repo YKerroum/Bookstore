@@ -1,8 +1,8 @@
 import React from 'react';
+import BooksContainer from '../components/BooksContainer';
 
 const Books = () => (
-  <h1>Books</h1>
-
+  <BooksContainer />
 );
 
 export default Books;
