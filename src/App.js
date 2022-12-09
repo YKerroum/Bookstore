@@ -12,13 +12,13 @@ const App = () => (
   <>
     <nav>
       {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-      <Link className="logo" path="/">Bookstore CMS</Link>
+      <Link className="logo" to="/">Bookstore CMS</Link>
       <ul className="nav-links">
         <li>
-          <NavLink path="/">Books</NavLink>
+          <NavLink className="nav-link" to="/">Books</NavLink>
         </li>
         <li>
-          <NavLink path="/categories">Categories</NavLink>
+          <NavLink className="nav-link" to="/categories">Categories</NavLink>
         </li>
       </ul>
       <button type="button" className="login-button">
