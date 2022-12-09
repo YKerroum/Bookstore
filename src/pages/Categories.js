@@ -1,7 +1,8 @@
 import React from 'react';
 
 const Categories = () => (
-  <h1>Categories</h1>
-
+  <div className="container">
+    <button type="button" className="check-status-button">Check status</button>
+  </div>
 );
 export default Categories;
