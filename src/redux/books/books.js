@@ -1,8 +1,26 @@
+import uuid from 'react-uuid';
+
 const REMOVE_BOOK = 'REMOVE_BOOK';
 const CREATE_BOOK = 'CREATE_BOOK';
 
 const initialState = {
-  books: [],
+  books: [
+    {
+      id: uuid(),
+      title: 'In Search of Lost Time',
+      author: 'Marcel Proust',
+    },
+    {
+      id: uuid(),
+      title: 'Ulysses',
+      author: 'James Joyce',
+    },
+    {
+      id: uuid(),
+      title: 'Don Quixote',
+      author: 'Miguel de Cervantes',
+    },
+  ],
 };
 
 export const removeBook = (payload) => ({
@@ -25,7 +43,10 @@ const booksReducer = (state = initialState, action) => {
     case REMOVE_BOOK:
       return {
         ...state,
-        books: state.books.filter((book) => book.id !== action.payload),
+        books: [
+          ...state.books.slice(0, action.payload),
+          ...state.books.slice(action.payload + 1),
+        ],
       };
     default:
       return state;
