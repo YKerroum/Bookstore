@@ -1,7 +1,7 @@
 const CHECK_STATUS = 'CHECK_STATUS';
 
 const initialState = {
-  status: [],
+  status: ' ',
 };
 
 export const checkStatus = () => ({
