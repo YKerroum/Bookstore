@@ -1,4 +1,11 @@
-import uuid from 'react-uuid';
+import { createAsyncThunk } from "@reduxjs/toolkit";
+
+const getPosts = createAsyncThunk ("posts/getPosts", async () => {
+   return fetch ("https://jsoplaceholder.typicode. com/posts"). then ((res) =>
+     res. json()
+  );
+});
+
 
 const REMOVE_BOOK = 'REMOVE_BOOK';
 const CREATE_BOOK = 'CREATE_BOOK';
