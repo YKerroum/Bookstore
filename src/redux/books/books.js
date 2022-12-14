@@ -42,9 +42,10 @@ const booksReducer = (state = initialState, action) => {
       };
     case REMOVE_BOOK:
       return {
+        ...state,
         books: [
-          ...state.slice(0, action.payload),
-          ...state.slice(action.payload + 1),
+          ...state.books.slice(0, action.payload),
+          ...state.books.slice(action.payload + 1),
         ],
       };
     default:
