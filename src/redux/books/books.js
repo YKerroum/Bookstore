@@ -1,4 +1,5 @@
 import uuid from 'react-uuid';
+
 const REMOVE_BOOK = 'REMOVE_BOOK';
 const CREATE_BOOK = 'CREATE_BOOK';
 
@@ -17,7 +18,7 @@ const initialState = {
     {
       id: uuid(),
       title: 'Don Quixote',
-      author: 'Miguel de Cervantes'
+      author: 'Miguel de Cervantes',
     },
   ],
 };
