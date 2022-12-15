@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import uuid from 'react-uuid';
-import { createBook } from '../redux/books/books';
+import { addBook } from '../redux/books/bookSlice';
 
 const AddBook = () => {
   const [title, setTitle] = useState('');
@@ -9,13 +9,13 @@ const AddBook = () => {
   const dispatch = useDispatch();
 
   const handleBook = (title, author) => {
-    const id = uuid();
+    const id = uuid().replaceAll('-', '');
     const newBook = {
       id,
       title,
       author,
     };
-    dispatch(createBook(newBook));
+    dispatch(addBook(newBook));
   };
 
   return (

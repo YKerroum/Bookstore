@@ -9,7 +9,7 @@ const BookList = () => {
 
   useEffect(() => {
     dispatch(getBooks());
-  }, [dispatch]);
+  }, [dispatch, books]);
 
   return (
     <div className="inner">

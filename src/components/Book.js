@@ -1,15 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/books';
+import { deleteBook } from '../redux/books/bookSlice';
 
 const Book = ({ isLoading, books }) => {
   const dispatch = useDispatch();
-  // const { id, title, author } = data;
-  // handler to remove a book after clicking on remove button
   const handleDelete = (ind) => {
-    const index = books.findIndex((bookItem) => bookItem.id === ind);
-    dispatch(removeBook(index));
+    dispatch(deleteBook(ind));
   };
 
   const bookListGenerator = books.map(
