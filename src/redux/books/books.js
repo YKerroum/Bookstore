@@ -1,33 +1,11 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
-
-const getPosts = createAsyncThunk ("posts/getPosts", async () => {
-   return fetch ("https://jsoplaceholder.typicode. com/posts"). then ((res) =>
-     res. json()
-  );
-});
-
-
 const REMOVE_BOOK = 'REMOVE_BOOK';
 const CREATE_BOOK = 'CREATE_BOOK';
 
 const initialState = {
-  books: [
-    {
-      id: uuid(),
-      title: 'In Search of Lost Time',
-      author: 'Marcel Proust',
-    },
-    {
-      id: uuid(),
-      title: 'Ulysses',
-      author: 'James Joyce',
-    },
-    {
-      id: uuid(),
-      title: 'Don Quixote',
-      author: 'Miguel de Cervantes',
-    },
-  ],
+  books: [],
+  loading: false,
+  error: null,
+  refresh: false,
 };
 
 export const removeBook = (payload) => ({

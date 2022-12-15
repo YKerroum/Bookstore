@@ -1,19 +1,22 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Book from './Book';
+import { getBooks } from '../redux/books/bookSlice';
 
 const BookList = () => {
-  const books = useSelector((state) => state.books.books);
+  const dispatch = useDispatch();
+  const { loading, books } = useSelector((state) => state.books);
+
+  useEffect(() => {
+    dispatch(getBooks());
+  }, [dispatch]);
+
   return (
     <div className="inner">
-      <ul>
-        {books.map((book) => (
-          <Book
-            key={book.id}
-            book={book}
-          />
-        ))}
-      </ul>
+      <Book
+        isLoading={loading}
+        books={books}
+      />
     </div>
   );
 };

@@ -26,6 +26,8 @@ const AddBook = () => {
         onSubmit={(e) => {
           e.preventDefault();
           handleBook(title, author);
+          setTitle('');
+          setAuthor('');
         }}
       >
         <input
