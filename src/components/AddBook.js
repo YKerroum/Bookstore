@@ -33,7 +33,7 @@ const AddBook = () => {
         <input
           type="text"
           name="title"
-          className="add-book-input"
+          className="input add-book-input"
           placeholder="Book title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
@@ -41,11 +41,16 @@ const AddBook = () => {
         <input
           type="text"
           name="author"
-          className="add-book-input"
+          className="input add-book-input"
           placeholder="Book author"
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
         />
+        <select className="input category-input">
+          <option value="Action">Action</option>
+          <option value="Science Fiction">Science Fiction</option>
+          <option value="Economy">Economy</option>
+        </select>
         <div className="add-book-buttons">
           <input type="submit" className="add-book-button" value="ADD BOOK" />
         </div>

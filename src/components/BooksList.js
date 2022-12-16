@@ -5,11 +5,11 @@ import { getBooks } from '../redux/books/bookSlice';
 
 const BookList = () => {
   const dispatch = useDispatch();
-  const { loading, books } = useSelector((state) => state.books);
+  const { loading, books, refresh } = useSelector((state) => state.books);
 
   useEffect(() => {
     dispatch(getBooks());
-  }, [dispatch, books]);
+  }, [refresh, dispatch]);
 
   return (
     <div className="inner">
