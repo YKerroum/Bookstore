@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto+Slab:wght@300&display=swap');
 
 * {
   margin: 0;
@@ -107,6 +107,11 @@ a {
   border-radius: 4px;
   border: 1px solid #e8e8e8;
   padding: 2rem;
+}
+
+.inner,
+.add-book {
+  width: 100%;
 }
 
 .book-content {
@@ -256,4 +261,56 @@ a {
   font-weight: 300;
   letter-spacing: 0.5px;
   color: #fff;
+}
+
+.horizontal-divider {
+  height: 0.125rem;
+  background-color: #e8e8e8;
+  width: 100%;
+  margin: 2.5rem 0 1.813rem;
+}
+
+.add-book-title,
+.input {
+  font-family: "Montserrat", sans-serif;
+}
+
+.input {
+  width: 25%;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  font-size: 1rem;
+  letter-spacing: -0.15px;
+  color: #121212;
+}
+
+.add-book-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.add-book-form {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  grid-gap: 32px;
+  gap: 32px;
+}
+
+.add-book-button {
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: none;
+  letter-spacing: 0.5px;
+  color: #fff;
+  font-size: 0.813rem;
+  font-weight: 700;
+  font-family: "Roboto Slab", serif;
 }
