@@ -24,7 +24,7 @@ const Book = ({ isLoading, books }) => {
       </li>
     ),
   );
-  return (<ul>{isLoading ? 'loading...' : (bookListGenerator)}</ul>);
+  return (<ul className="book-list">{isLoading ? 'loading...' : (bookListGenerator)}</ul>);
 };
 
 Book.propTypes = {

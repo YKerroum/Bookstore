@@ -35,7 +35,7 @@ export const deleteBook = createAsyncThunk('book/removeBook', async (payload) =>
 
 const bookSlice = createSlice({
   name: 'book',
-  initialState: { books: [], loading: false },
+  initialState: { books: [], loading: false, refresh: true },
   extraReducers: {
     [getBooks.pending]: (state) => ({ ...state, isloading: true }),
     [getBooks.fulfilled]: (state, action) => ({
@@ -49,6 +49,7 @@ const bookSlice = createSlice({
     [addBook.fulfilled]: (state) => ({
       ...state,
       isloading: false,
+      refresh: !state.refresh,
     }),
     [addBook.rejected]: (state) => ({ ...state, isloading: false }),
     // remove a book reducer
@@ -56,6 +57,7 @@ const bookSlice = createSlice({
     [deleteBook.fulfilled]: (state) => ({
       ...state,
       isloading: false,
+      refresh: !state.refresh,
     }),
     [deleteBook.rejected]: (state) => ({ ...state, isloading: false }),
   },
