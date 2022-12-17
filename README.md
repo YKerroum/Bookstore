@@ -51,6 +51,8 @@ alt="logo" width="140"  height="auto" />
   <summary>Building</summary>
   <ul>
     <li><a href="https://reactjs.org/">ReactJs</a></li>
+    <li><a href="https://redux.js.org/">Redux</a></li>
+    <li><a href="https://www.notion.so/Bookstore-API-51ea269061f849118c65c0a53e88a739">Bookstore API</a></li>
   </ul>
 </details>
 <details>
